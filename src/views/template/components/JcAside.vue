@@ -22,7 +22,7 @@
             class="navbar-brand-img h-100"
             alt="main_logo"
           /> -->
-          <span class="ms-1 font-weight-bold">POS Amosis V2</span>
+          <span class="ms-1 font-weight-bold">GRUPO INNOVA - FADE</span>
         </a>
       </div>
 

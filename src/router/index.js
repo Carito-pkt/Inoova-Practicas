@@ -37,7 +37,7 @@ const routes = [
       edit: "/config/medida/edit/",
       modelApi: 'dashboard'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -50,7 +50,7 @@ const routes = [
       edit: "/config/medida/edit/",
       modelApi: 'medidas'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -61,7 +61,7 @@ const routes = [
       title: "Medida",
       modelApi: 'medidas'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -79,7 +79,7 @@ const routes = [
       edit: "/config/marca/edit/",
       modelApi: 'marcas'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -90,7 +90,7 @@ const routes = [
       title: "Marca",
       modelApi: 'marcas'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -108,7 +108,7 @@ const routes = [
       edit: "/config/Categoria/edit/",
       modelApi: 'categorias'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -119,7 +119,7 @@ const routes = [
       title: "Categoria",
       modelApi: 'categorias'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -137,7 +137,7 @@ const routes = [
       edit: "/config/articulo/edit/",
       modelApi: 'articulos'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -148,7 +148,7 @@ const routes = [
       title: "Articulo",
       modelApi: 'articulos'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -166,7 +166,7 @@ const routes = [
       edit: "/usuario/edit/",
       modelApi: 'users'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -177,7 +177,7 @@ const routes = [
       title: "Usuarios",
       modelApi: 'users'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -195,7 +195,7 @@ const routes = [
       edit: "/inventario/kardex/producto/",
       modelApi: 'inventarios'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -214,7 +214,7 @@ const routes = [
       edit: "/inventario/kardex/producto/",
       modelApi: 'inventarios'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -227,7 +227,7 @@ const routes = [
       edit: "/ventas/invoice/",
       modelApi: 'ventas'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -235,7 +235,7 @@ const routes = [
     component: VentaInvoice,
     props:true, 
     meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -248,7 +248,7 @@ const routes = [
       edit: "/inventario/kardex/producto/",
       modelApi: 'inventarios'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -261,7 +261,7 @@ const routes = [
       edit: "/compras/invoice/",
       modelApi: 'compras'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -269,7 +269,7 @@ const routes = [
     component: CompraInvoice,
     props:true, 
     meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -282,7 +282,7 @@ const routes = [
       edit: "/inventario/kardex/producto/",
       modelApi: 'cajas'
     }, meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {

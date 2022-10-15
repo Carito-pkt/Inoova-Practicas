@@ -6,15 +6,15 @@
                 <div
                   class="copyright text-center text-sm text-muted text-lg-start"
                 >
-                Amosis v2
+                ESPOCH - FADE
                   ©
                  {{new Date().getFullYear()}}
-                  , made with <i class="fa fa-heart"></i> by
+                  , en colaboracion con
                   <a
                     href="https://www.jhonycreativo.net"
                     class="font-weight-bold"
                     target="_blank"
-                    >Jhony Creativo</a
+                    > Software</a
                   >
                  .
                 </div>
@@ -28,7 +28,7 @@
                       href="https://www.jhonycreativo.net"
                       class="nav-link text-muted"
                       target="_blank"
-                      >Jhony Creativo</a
+                      >GRUPO INNOVA</a
                     >
                   </li>
                  
