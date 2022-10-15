@@ -1,5 +1,5 @@
 <template>
-  <jc-template module="Dashboard" page="Dashboard">
+  <jc-template module="Tablero" page="Tablero">
     <template v-slot:body class="row">
       <div class="row">
           <div class="col-lg-8">
