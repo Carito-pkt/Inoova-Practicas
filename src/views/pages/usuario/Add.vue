@@ -55,8 +55,9 @@
                   <div class="form-group has-success">
                     <label for="">EMAIL</label>
                     <input
-                      type="text"
+                      type="email"
                       placeholder=""
+                      required
                       v-model="model.email"
                       class="form-control "
                          :class="model.email.length>0?'is-valid':''"
@@ -66,7 +67,7 @@
                 </div>
                         <div class="col-md-12">
                   <div class="form-group has-success">
-                    <label for="">PASSWORD</label>
+                    <label for="">CONTRASEÑA</label>
                     <input
                       type="password"
                       placeholder=""
