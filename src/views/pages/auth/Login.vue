@@ -54,7 +54,7 @@
                 class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8"
               >
                 <div
-                  class="oblique-image bg-cover position-relative fixed-top ms-auto h-100 z-index-0 ms-n6"
+                  class="oblique-image bg-cover position-sticky ms-auto h-100 w-55 z-index-0 ms-n6"
                   style="
                     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Escudo_de_la_Escuela_Superior_Polit%C3%A9cnica_de_Chimborazo.png/640px-Escudo_de_la_Escuela_Superior_Polit%C3%A9cnica_de_Chimborazo.png');
                   "
