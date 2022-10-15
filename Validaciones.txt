@@ -1,0 +1,14 @@
+Validar modulo login (1)
+
+Poner el titulo de Innova(2)
+Validar modulo de usuario (2)
+
+Validar modulo de medidas (1)
+
+Validar modulo de marcas (2)
+
+Validar modulo de categorias (1)
+
+Validar modulo de articulos (1)
+
+Validar modulo de inventario (2)
