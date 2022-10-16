@@ -30,6 +30,7 @@
                     <label for="">USUARIO</label>
                     <input
                       type="text"
+                      id="usuario"
                       placeholder=""
                       v-model="model.username"
                       class="form-control "
@@ -44,6 +45,7 @@
                     <label for="">NOMBRE</label>
                     <input
                       type="text"
+                      id="nombre"
                       placeholder=""
                       v-model="model.nombre"
                       class="form-control "
@@ -56,6 +58,7 @@
                     <label for="">EMAIL</label>
                     <input
                       type="email"
+                      id="email"
                       placeholder=""
                       required
                       v-model="model.email"
@@ -70,6 +73,7 @@
                     <label for="">CONTRASEÑA</label>
                     <input
                       type="password"
+                      id="pass"
                       placeholder=""
                       v-model="model.password"
                       class="form-control "
