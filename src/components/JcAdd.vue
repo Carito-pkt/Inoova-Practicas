@@ -20,12 +20,15 @@ import axios from "../axios.js";
 var error = '';
 
 function validarNombre(nombre){
-  if(/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(nombre) && nombre != ""){
+  if(/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(nombre) && nombre != "" && nombre.length>1){
     return true;
   }
   else{
     if(nombre == ""){
       error += 'El nombre no puede quedar vacio. \n';
+    }
+    else if (nombre.length<2){
+      error += 'El nombre no puede ser ' + nombre + '. Se necesita una longitud mayor a un caracter. \n'
     }
     else{
       error += 'El nombre no puede ser ' + nombre + '. \n'
@@ -84,19 +87,19 @@ function validaciones(atributo, valor){
   switch(atributo){
     case 'username':
       pasa = validarUsuario(valor);
-      console.log('El valor de username es: ' + valor);
+      //console.log('El valor de username es: ' + valor);
       break;
     case 'nombre':
       pasa = validarNombre(valor);
-      console.log('El valor de nombre es: ' + valor);
+      //console.log('El valor de nombre es: ' + valor);
       break;
     case 'email':
       pasa = validarEmail(valor);
-      console.log('El valor de email es: ' + valor);
+      //console.log('El valor de email es: ' + valor);
       break;
     case 'password':
       pasa = validarPass(valor);
-      console.log('El valor de password es: ' + valor);
+      //console.log('El valor de password es: ' + valor);
       break;
   }
   return pasa;
@@ -106,13 +109,15 @@ function validar(objeto){
   let atributos = Object.keys(objeto);
   let datos = Object.values(objeto)
   let aprovado = false;
+  let confirmado = true;
   //console.log(atributos, datos);
   for (let i = 0; i < atributos.length; i++){
     aprovado = validaciones(atributos[i], datos[i]);
-    console.log(atributos[i], datos[i], aprovado);
+    //console.log(atributos[i], datos[i], aprovado);
+    if(!aprovado) confirmado = aprovado;
   }
   //console.log(atributos.length, datos.length);
-  return aprovado;
+  return confirmado;
 }
 
 export default {
