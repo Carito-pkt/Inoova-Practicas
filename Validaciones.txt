@@ -1,11 +1,11 @@
 Validar modulo login (1)
 
-Poner el titulo de Innova(2)
-Validar modulo de usuario (2)
+Poner el titulo de Innova(2) LISTO
+Validar modulo de usuario (2) LISTO
 
 Validar modulo de medidas (1)
 
-Validar modulo de marcas (2)
+Validar modulo de marcas (2) Ingresar
 
 Validar modulo de categorias (1)
 

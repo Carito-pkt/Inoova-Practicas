@@ -79,6 +79,40 @@ function validarPass(pass){
   }
 }
 
+function validaciones(atributo, valor){
+  let pasa
+  switch(atributo){
+    case 'username':
+      pasa = validarUsuario(valor);
+    break;
+    case 'nombre':
+      pasa = validarNombre(valor);
+    break;
+    case 'email':
+      pasa = validarEmail(valor);
+    break;
+    case 'password':
+      pasa = validarPass(valor);
+    break;
+  }
+  return pasa;
+}
+
+function validar(objeto){
+  let atributos = Object.keys(objeto);
+  let datos = Object.values(objeto)
+  let aprovado = true;
+  console.log(atributos, datos);
+  /*for (let i = 0; i < atributos.length; i){
+    aprovado = validaciones(atributos[i], datos[i]);
+    if(!aprovado){
+      break;
+    }
+  }*/
+  //console.log(atributos.length, datos.length);
+  return true;
+}
+
 
 export default {
   props: {
@@ -109,8 +143,9 @@ export default {
       });
       let loader = this.$loading.show();
 
-      try {
-        if (validarUsuario(usuario) && validarNombre(nombre) && validarEmail(email) && validarPass(pass)) {      
+      try {   
+        if(validar(this.model)){
+      
           const response = await axios.post(this.modelApi, this.model);
           console.log(response);
           swalWithBootstrapButtons
@@ -134,19 +169,7 @@ export default {
               }
             });
         }
-        else{
-          swalWithBootstrapButtons
-            .fire({
-              title: "Error!",
-              text: error,
-              icon: "error",
-              showCancelButton: true,
-              cancelButtonText: "Intentar de nuevo",
-              reverseButtons: false,
-            })
-        } 
-      } 
-      
+      }     
       catch (error) {
         console.log(error);
         swalWithBootstrapButtons.fire(
