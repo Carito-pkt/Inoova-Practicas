@@ -82,6 +82,54 @@ function validarPass(pass){
   }
 }
 
+function validarBarra(cod){
+  if(!isNaN(cod) && cod.length>2){
+    return true;
+  }
+  else{
+    if (cod == ""){
+      error += 'El código de barra no puede quedar vacío. \n'
+    }
+    else if (cod.length < 3){
+      error += 'La código de barra debe ser mayor a 2 dígitos. \n'
+    }
+    else{
+      error += 'El código de barra consta de solo números. \n'
+    }
+    return false;
+  }
+}
+
+function validarVenta(cod){
+  if(Number.isInteger(cod)){
+    return true;
+  }
+  else{
+    error += 'La venta solo se registra con números. \n'
+    return false;
+  }
+}
+
+function validarCompra(cod){
+  if(Number.isInteger(cod)){
+    return true;
+  }
+  else{
+    error += 'La compra solo se registra con números. \n'
+    return false;
+  }
+}
+
+function validarStock(cod){
+  if(Number.isInteger(cod)){
+    return true;
+  }
+  else{
+    error += 'El stock solo se registra con números. \n'
+    return false;
+  }
+}
+
 function validaciones(atributo, valor){
   let pasa = true;
   switch(atributo){
@@ -100,6 +148,18 @@ function validaciones(atributo, valor){
     case 'password':
       pasa = validarPass(valor);
       //console.log('El valor de password es: ' + valor);
+      break;
+    case 'barra':
+      pasa = validarBarra(valor);
+      break;
+    case 'venta':
+      pasa = validarVenta(valor);
+      break;
+    case 'compra':
+      pasa = validarCompra(valor);
+      break;
+    case 'stock_minimo':
+      pasa = validarStock(valor);
       break;
   }
   return pasa;
