@@ -20,80 +20,84 @@ import axios from "../axios.js";
 var error = '';
 
 function validarNombre(nombre){
-  if(/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(nombre.value) && nombre.value != ""){
+  if(/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(nombre) && nombre != ""){
     return true;
   }
   else{
-    if(nombre.value == ""){
-      error += 'El nombre no puede quedar vacio ';
+    if(nombre == ""){
+      error += 'El nombre no puede quedar vacio. \n';
     }
     else{
-      error += 'El nombre no puede ser ' + nombre.value + ' '
+      error += 'El nombre no puede ser ' + nombre + '. \n'
     }
     return false;
   }
 }
 
 function validarUsuario(usuario){
-  if(/^[a-zA-Z0-9\_\-]{4,16}$/.test(usuario.value) && usuario.value != ""){
+  if(/^[a-zA-Z0-9\_\-]{4,16}$/.test(usuario) && usuario != ""){
     return true;
   }
   else{
-    if(usuario.value == ""){
-      error += 'El usuario no puede quedar vacio ';
+    if(usuario == ""){
+      error += 'El usuario no puede quedar vacio. \n';
     }
     else{
-      error += 'El usuario no puede ser ' + usuario.value + ' '
+      error += 'El usuario no puede ser ' + usuario + '. \n'
     }
     return false;
   }
 }
 
 function validarEmail(email){
-  if(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email.value) && email.value != ""){
+  if(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email) && email != ""){
     return true;
   }
   else{
-    if(email.value == ""){
-      error += 'El correo no puede quedar vacio ';
+    if(email == ""){
+      error += 'El correo no puede quedar vacio. \n';
     }
     else{
-      error += 'El correo no puede ser ' + email.value + ' '
+      error += 'El correo no puede ser ' + email + '. \n'
     }
     return false;
   }
 }
 
 function validarPass(pass){
-  if(/^.{4,12}$/.test(pass.value) && pass.value.length>6){
+  if(/^.{4,12}$/.test(pass) && pass.length>6){
     return true;
   }
   else{
-    if (pass.value == ""){
-      error += 'La contraseña no puede quedar vacía. '
+    if (pass == ""){
+      error += 'La contraseña no puede quedar vacía. \n'
     }
-    else if (pass.value.length < 7){
-      error += 'La contraseña no puede tomar ese valor! Esta de ser mayor a 6 dígitos '
+    else if (pass.length < 7){
+      error += 'La contraseña no puede tomar ese valor! Esta de ser mayor a 6 dígitos. \n'
     }
     return false;
   }
 }
 
 function validaciones(atributo, valor){
-  let pasa
+  let pasa = true;
   switch(atributo){
     case 'username':
       pasa = validarUsuario(valor);
-    break;
+      console.log('El valor de username es: ' + valor);
+      break;
     case 'nombre':
       pasa = validarNombre(valor);
-    break;
+      console.log('El valor de nombre es: ' + valor);
+      break;
     case 'email':
       pasa = validarEmail(valor);
-    break;
+      console.log('El valor de email es: ' + valor);
+      break;
     case 'password':
       pasa = validarPass(valor);
-    break;
+      console.log('El valor de password es: ' + valor);
+      break;
   }
   return pasa;
 }
@@ -101,18 +105,15 @@ function validaciones(atributo, valor){
 function validar(objeto){
   let atributos = Object.keys(objeto);
   let datos = Object.values(objeto)
-  let aprovado = true;
-  console.log(atributos, datos);
-  /*for (let i = 0; i < atributos.length; i){
+  let aprovado = false;
+  //console.log(atributos, datos);
+  for (let i = 0; i < atributos.length; i++){
     aprovado = validaciones(atributos[i], datos[i]);
-    if(!aprovado){
-      break;
-    }
-  }*/
+    console.log(atributos[i], datos[i], aprovado);
+  }
   //console.log(atributos.length, datos.length);
-  return true;
+  return aprovado;
 }
-
 
 export default {
   props: {
@@ -168,6 +169,18 @@ export default {
                 self.$router.back();
               }
             });
+        }
+        else{
+          swalWithBootstrapButtons
+            .fire({
+              title: "Ups!",
+              text: error,
+              icon: "error",
+              showCancelButton: true,
+              confirmButtonText: "CHA",
+              cancelButtonText: "LE!",
+              reverseButtons: false,
+            })
         }
       }     
       catch (error) {
