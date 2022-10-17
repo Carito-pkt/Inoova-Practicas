@@ -7,16 +7,9 @@
                   class="copyright text-center text-sm text-muted text-lg-start"
                 >
                 ESPOCH - FADE
-                  ©
+                en colaboracion con Software
                  {{new Date().getFullYear()}}
-                  , en colaboracion con
-                  <a
-                    href="https://www.jhonycreativo.net"
-                    class="font-weight-bold"
-                    target="_blank"
-                    > Software</a
-                  >
-                 .
+                 ©
                 </div>
               </div>
               <div class="col-lg-6">
@@ -24,11 +17,11 @@
                   class="nav nav-footer justify-content-center justify-content-lg-end"
                 >
                   <li class="nav-item">
-                    <a
+                    <h6
                       href="https://www.jhonycreativo.net"
                       class="nav-link text-muted"
                       target="_blank"
-                      >GRUPO INNOVA</a
+                      >GRUPO INNOVA</h6
                     >
                   </li>
                  

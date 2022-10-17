@@ -37,6 +37,7 @@
                     <label for="">USUARIO</label>
                     <input
                       type="text"
+                      id="usuario"
                       placeholder=""
                       v-model="model.username"
                       class="form-control "
@@ -51,6 +52,7 @@
                     <label for="">NOMBRE</label>
                     <input
                       type="text"
+                      id="nombre"
                       placeholder=""
                       v-model="model.nombre"
                       class="form-control "
@@ -62,7 +64,8 @@
                   <div class="form-group has-success">
                     <label for="">EMAIL</label>
                     <input
-                      type="text"
+                      type="email"
+                      id="email"
                       placeholder=""
                       v-model="model.email"
                       class="form-control "
@@ -76,6 +79,7 @@
                     <label for="">PASSWORD</label>
                     <input
                       type="password"
+                      id="pass"
                       placeholder=""
                       v-model="model.password"
                       class="form-control "
@@ -99,6 +103,9 @@
 <script>
 
 import axios from '../../../axios.js';
+
+
+
 export default {
   props:{
     title:{
@@ -134,6 +141,12 @@ export default {
   mounted() {
     this.$nextTick(async () => {
       let loader = this.$loading.show()
+
+      const nombre = document.getElementById("nombre");
+      const pass = document.getElementById("pass");
+      const usuario = document.getElementById("usuario");
+      const email = document.getElementById("email");
+
       try{
       await Promise.all([this.GET_DATA(this.modelApi+'/'+this.id)]).then((v)=>{
         this.model = v[0];

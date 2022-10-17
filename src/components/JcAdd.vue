@@ -109,11 +109,6 @@ export default {
       });
       let loader = this.$loading.show();
 
-      const nombre = document.getElementById("nombre");
-      const pass = document.getElementById("pass");
-      const usuario = document.getElementById("usuario");
-      const email = document.getElementById("email");
-
       try {
         if (validarUsuario(usuario) && validarNombre(nombre) && validarEmail(email) && validarPass(pass)) {      
           const response = await axios.post(this.modelApi, this.model);
@@ -168,4 +163,5 @@ export default {
     this.$nextTick(() => {});
   },
 };
+
 </script>
