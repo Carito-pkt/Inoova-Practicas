@@ -103,9 +103,6 @@
 <script>
 
 import axios from '../../../axios.js';
-
-
-
 export default {
   props:{
     title:{
@@ -141,11 +138,6 @@ export default {
   mounted() {
     this.$nextTick(async () => {
       let loader = this.$loading.show()
-
-      const nombre = document.getElementById("nombre");
-      const pass = document.getElementById("pass");
-      const usuario = document.getElementById("usuario");
-      const email = document.getElementById("email");
 
       try{
       await Promise.all([this.GET_DATA(this.modelApi+'/'+this.id)]).then((v)=>{
