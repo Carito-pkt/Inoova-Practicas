@@ -76,6 +76,22 @@
 <script>
 import axios from '../../../axios.js'
 import { mapActions } from 'vuex';
+
+function validarEmail(email){
+  if(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email) && email != ""){
+    return true;
+  }
+  else{
+    if(email == ""){
+      error += 'El correo no puede quedar vacio. \n';
+    }
+    else{
+      error += 'El correo no puede ser ' + email + '. \n'
+    }
+    return false;
+  }
+}
+
 export default {
     
     data() {
@@ -100,25 +116,32 @@ customClass: {
 buttonsStyling: false
 })
                 try {
+
                     const data = {
                         email : this.email,
                         password : this.password,
                     }
-                    const res =  await axios.post('iniciar-sesion',data);
-                    this.usuario = res.data;
+                    if (validarEmail(data.email)){
+                      const res =  await axios.post('iniciar-sesion',data);
+                      console.log(data.email);
+                      this.usuario = res.data;
             
-                     localStorage.setItem("getAmosisUser",JSON.stringify(this.usuario));
-                     this.getAmosisUser()
-                   this.$router.push('/');
+                      localStorage.setItem("getAmosisUser",JSON.stringify(this.usuario));
+                      this.getAmosisUser()
+                      this.$router.push('/');
+                    }else{
+                      swalWithBootstrapButtons.fire(
+                      "Correo invalido",
+                      "Por favor ingrese un email correcto"
+                    )}
                     
-                   
                 }  catch (error) {
                     
                 swalWithBootstrapButtons.fire(
-          "Lo sentimos :(",
-          "No hemos podido iniciar sesión, intenta de nuevo",
-          "error"
-        );
+                  "Lo sentimos :(",
+                  "No hemos podido iniciar sesión, intenta de nuevo",
+                   "error"
+                );
                 }finally{
                     loader.hide()
                 }
@@ -150,4 +173,5 @@ buttonsStyling: false
             
         },
 }
+
 </script>
