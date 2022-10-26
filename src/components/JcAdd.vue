@@ -78,6 +78,9 @@ function validarPass(pass){
     else if (pass.length < 7){
       error += 'La contraseña no puede tomar ese valor! Esta de ser mayor a 6 dígitos. \n'
     }
+    else{
+      error += 'La contraseña no puede tomar ese valor. Intente de nuevo \n'
+    }
     return false;
   }
 }
@@ -135,19 +138,20 @@ function validaciones(atributo, valor){
   switch(atributo){
     case 'username':
       pasa = validarUsuario(valor);
-      //console.log('El valor de username es: ' + valor);
+      console.log('El valor de username es: ' + valor + ' ' + pasa);
       break;
     case 'nombre':
       pasa = validarNombre(valor);
-      //console.log('El valor de nombre es: ' + valor);
+      console.log('El valor de nombre es: ' + valor  + ' ' + pasa);
       break;
     case 'email':
       pasa = validarEmail(valor);
-      //console.log('El valor de email es: ' + valor);
+      console.log('El valor de email es: ' + valor + ' ' + pasa);
       break;
     case 'password':
       pasa = validarPass(valor);
-      //console.log('El valor de password es: ' + valor);
+      console.log('El valor de password es: ' + valor + ' ' + pasa);
+
       break;
     case 'barra':
       pasa = validarBarra(valor);
