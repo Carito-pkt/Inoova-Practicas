@@ -1,15 +1,15 @@
 const item =[
     {
-        text: 'Tablero',
-        name:'Tablero',
+        text: 'Resumen',
+        name:'Resumen',
         title:false,
-        module:'Tablero',
+        module:'Resumen',
         icon:'fas fa-store ',
         children:[
             {
                 mini: 'D',
-                page: 'Tablero',
-                text: 'Tablero',
+                page: 'Resumen',
+                text: 'Resumen',
                 path: '/',
             },
             

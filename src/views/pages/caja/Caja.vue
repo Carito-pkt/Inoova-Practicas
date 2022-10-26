@@ -214,7 +214,7 @@
 </div>
 <div class=" col-12 col-lg-6 mt-1 text-center">
 <div class="border-dashed border-1 border-secondary border-radius-md py-1">
-<h6 class="text-primary text-sm text-gradient mb-0">EGRESOS</h6>
+<h6 class="text-primary text-sm text-gradient mb-0">GASTOS</h6>
 <h4 class="font-weight-bolder text-xs"><span class="small"> </span><span id="state1" countto="23980">{{model.egresos>0?'-':''}} {{Number(model.egresos).toFixed(2)}}</span></h4>
 </div>
 </div>

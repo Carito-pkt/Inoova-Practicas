@@ -22,8 +22,8 @@
       <div class="card shadow-lg blur">
         <div class="card-header pb-0 pt-3 bg-transparent">
           <div class="float-start">
-            <h5 class="mt-3 mb-0">Amosis Point of Sale {{new Date().getFullYear()}}</h5>
-            <p>Programmed by Jhony creativo.</p>
+            <h5 class="mt-3 mb-0">MKT Innova {{new Date().getFullYear()}}</h5>
+            <p>ESPOCH .</p>
           </div>
           <div class="float-end mt-4">
             <button
@@ -39,13 +39,13 @@
          
 
           <div class="mt-3">
-            <h6 class="mb-0">Free version.</h6>
-            <p class="text-sm">This version is free and its sale is prohibited.</p>
+            <h6 class="mb-0">En colaboración con Software.</h6>
+            <p class="text-sm">Grupo Innova.</p>
           </div>
        
           <hr class="horizontal dark mb-1 d-xl-block d-none" />
           <div class="mt-2 d-xl-block d-none">
-            <h6 class="mb-0">Light/Dark</h6>
+            <h6 class="mb-0">Tema: Claro/Oscuro</h6>
           </div>
           <div class="form-check form-switch ps-0 d-xl-block d-none">
             <input
@@ -56,18 +56,18 @@
             />
           </div>
           <hr class="horizontal dark my-sm-4" />
-         <a href="https://www.facebook.com/profile.php?id=100082805217232" target="_blank" class="btn btn-facebook btn-icon w-100">
+         <a href="https://www.facebook.com/innovacenterEspoch" target="_blank" class="btn btn-facebook btn-icon w-100">
     <span class="btn-inner--icon"><i class="fab fa-facebook mx-2"></i></span>
     <span class="btn-inner--text">Facebook</span>
 </a>
-         <a href="https://www.patreon.com/jhonycreativo" target="_blank" class="btn btn-dark btn-icon w-100">
-    <span class="btn-inner--icon"><i class="fab fa-patreon mx-2"></i></span>
-    <span class="btn-inner--text">Patreon</span>
+         <a href="https://twitter.com/center_innova" target="_blank" class="btn btn-dark btn-icon w-100">
+    <span class="btn-inner--icon"><i class="fab fa-twitter mx-2"></i></span>
+    <span class="btn-inner--text">twitter</span>
 </a>
 
-<a href="https://www.youtube.com/channel/UC0ugOxwyYFNbZCW31BEYyNw" target="_blank" class="btn btn-youtube btn-icon w-100">
-    <span class="btn-inner--icon"><i class="fab fa-youtube mx-2"></i></span>
-    <span class="btn-inner--text">YouTube</span>
+<a href="https://www.espoch.edu.ec/index.php/component/k2/item/4316-innova-center-espoch-calificada-como-agente-de-innovaci%C3%B3n-por-la-senescyt.html" target="_blank" class="btn btn-youtube btn-icon w-100">
+    <span class="btn-inner--icon"><i class="fas fa-book-reader mx-2"></i></span>
+    <span class="btn-inner--text">Acreditación</span>
 </a>
         
         </div>

@@ -1,5 +1,5 @@
 <template>
-  <jc-template module="Tablero" page="Tablero">
+  <jc-template module="Resumen" page="Resumen">
     <template v-slot:body class="row">
       <div class="row">
           <div class="col-lg-8">
@@ -103,7 +103,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-capitalize font-weight-bold">
-                      Egresos
+                      Gastos
                     </p>
                     <h5 class="font-weight-bolder mb-0">
                      {{Number(model.egresos).toFixed(2)}}

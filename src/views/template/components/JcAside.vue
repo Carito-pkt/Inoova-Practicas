@@ -22,7 +22,7 @@
             class="navbar-brand-img h-100"
             alt="main_logo"
           /> -->
-          <span class="ms-1 font-weight-bold">GRUPO INNOVA - FADE</span>
+          <span class="ms-1 font-weight-bold">Innova - POS</span>
         </a>
       </div>
 

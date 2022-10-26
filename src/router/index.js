@@ -32,7 +32,7 @@ const routes = [
     component: Dashboard,
     props: {
       default: true,
-      title: "Tablero",
+      title: "Resumen",
       add: "/config/medida/add",
       edit: "/config/medida/edit/",
       modelApi: 'dashboard'
