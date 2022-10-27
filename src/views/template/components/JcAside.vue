@@ -17,12 +17,12 @@
           href="javascript:void(0)"
       
         >
-          <!-- <img
+           <img
             src="/assets/img/logo-ct-dark.png"
             class="navbar-brand-img h-100"
             alt="main_logo"
-          /> -->
-          <span class="ms-1 font-weight-bold">Innova - POS</span>
+          /> 
+          <span class="ms-1 font-weight-bold"> INNOVA - POS</span>
         </a>
       </div>
 
