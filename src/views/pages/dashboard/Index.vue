@@ -58,7 +58,7 @@
                     class="icon icon-shape bg-gradient-danger  shadow text-center border-radius-md"
                   >
                     <i
-                      class="ni ni-world text-2xl opacity-10"
+                      class="far fa-handshake text-2xl opacity-10"
                       aria-hidden="true"
                     ></i>
                   </div>
@@ -89,7 +89,7 @@
                     class="icon icon-shape bg-gradient-danger  shadow text-center border-radius-md"
                   >
                     <i
-                      class="ni ni-paper-diploma text-2xl opacity-10"
+                      class="fas fa-hand-holding-usd text-2xl opacity-10"
                       aria-hidden="true"
                     ></i>
                   </div>
