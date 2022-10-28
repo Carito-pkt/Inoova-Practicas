@@ -29,7 +29,7 @@
                     class="icon icon-shape bg-gradient-danger  shadow text-center border-radius-md"
                   >
                     <i
-                      class="ni ni-money-coins text-2xl opacity-10"
+                      class="fa fa-shopping-bag text-2xl opacity-10"
                       aria-hidden="true"
                     ></i>
                   </div>
@@ -118,7 +118,7 @@
                     class="icon icon-shape bg-gradient-danger  shadow text-center border-radius-md"
                   >
                     <i
-                      class="ni ni-cart text-2xl opacity-10"
+                      class="fas fa-balance-scale-right text-2xl opacity-10"
                       aria-hidden="true"
                     ></i>
                   </div>
