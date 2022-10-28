@@ -18,7 +18,7 @@
       
         >
            <img
-            src="/assets/img/logo-ct-dark.png"
+            src="/assets/img/innova-logo.png"
             class="navbar-brand-img h-100"
             alt="main_logo"
           /> 
