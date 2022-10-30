@@ -77,7 +77,7 @@
                     Ingresos
                     </p>
                     <h5 class="font-weight-bolder mb-0">
- {{Number(model.ingresos).toFixed(2)}}
+                    {{Number(model.ingresos).toFixed(2)}}
                       <!-- <span class="text-danger text-sm font-weight-bolder"
                         >-2%</span
                       > -->
@@ -129,10 +129,31 @@
         </div>
       </div>
     
+      <!--AGREGANDO PANEL PARA ESTADISTICA-->
+      <div  class="card" style ="width: 1007px; height: 500px; margin-top: 25px;">
+        <div class="icon icon-shape bg-gradient-danger  
+              shadow text-center border-radius-md" style="margin-top: 15px ; margin-left: 10px;">
+          <i class="fas fa-sliders-h text-2xl opacity-10" aria-hidden="true"></i>
+          <form style=" width: 100px; margin-left:40px; margin-top: -15px;">Filtros
+            <div style="margin-top: -30px;">
+                <select style =" width: 350px; height: 40px; margin-left: 550px;">
+                  <option>5 días</option>
+                  <option>7 días</option>
+                  <option>30 días</option>
+                  <option>60 días</option>
+                  <option>90 días</option>
+                  <option>365 días</option>
+                </select>
+            </div>
+        </form>
+        </div>        
+      </div>
     </template>
   </jc-template>
 </template>
+
 <script>
+
 import axios from "../../../axios.js";
 export default {
   props: {
